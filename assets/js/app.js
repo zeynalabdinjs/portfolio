@@ -1,5 +1,5 @@
 window.onload = () => {
-    // document.querySelector(".preloader").classList.add("active")
+    document.querySelector(".preloader").classList.add("active")
     document.querySelector(".preloader").style.background = "none"
     setTimeout(() => {
         document.querySelector(".preloader").remove();
