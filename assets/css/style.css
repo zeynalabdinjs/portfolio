@@ -116,7 +116,7 @@ nav .nav-wrapper .menu-content {
   transition: 0.8s ease;
   -webkit-transform: translateY(-100%) rotate(5deg);
           transform: translateY(-100%) rotate(5deg);
-  padding-top: 130px;
+  padding-top: 100px;
   overflow-y: auto;
   overflow-x: hidden;
 }
