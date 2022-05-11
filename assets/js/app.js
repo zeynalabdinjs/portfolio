@@ -1,3 +1,11 @@
+window.onload = () => {
+    document.querySelector(".preloader").classList.add("active")
+    document.querySelector(".preloader").style.background = "none"
+    setTimeout(() => {
+        document.querySelector(".preloader").remove();
+    }, 3500)
+}
+
 
 
 var swiper = new Swiper(".mySwiper", {
