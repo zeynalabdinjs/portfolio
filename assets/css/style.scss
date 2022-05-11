@@ -98,6 +98,8 @@ nav {
             transition: 0.8s ease;
             transform: translateY(-100%) rotate(5deg);
             padding-top: 130px;
+            overflow-y: auto;
+            overflow-x: hidden;
 
             &.active {
                 visibility: visible;
