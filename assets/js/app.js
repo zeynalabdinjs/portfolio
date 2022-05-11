@@ -1,5 +1,5 @@
 window.onload = () => {
-    document.querySelector(".preloader").classList.add("active")
+    // document.querySelector(".preloader").classList.add("active")
     document.querySelector(".preloader").style.background = "none"
     setTimeout(() => {
         document.querySelector(".preloader").remove();
@@ -37,4 +37,14 @@ sliderNumber.innerHTML = "0" + (swiper2.activeIndex + 1)
 swiper2.on('slideChange', function (e) {
     sliderNumber.innerHTML = "0" + (swiper2.activeIndex + 1)
     console.log(swiper2.activeIndex)
+});
+
+// Navbar
+const nav_toggle = document.querySelector(".menu-toggle")
+const menu_content = document.querySelector(".menu-content");
+nav_toggle.addEventListener("click", () => {
+    nav_toggle.classList.toggle("active");
+    menu_content.classList.toggle("active");
+
+
 });

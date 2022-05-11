@@ -1,75 +1,105 @@
-.fw-300{
+.fw-300 {
     font-weight: 300;
 }
-.fw-400{
+
+.fw-400 {
     font-weight: 400;
 }
-.fw-500{
+
+.fw-500 {
     font-weight: 500;
 }
-.fw-600{
+
+.fw-600 {
     font-weight: 600;
 }
-.fw-700{
+
+.fw-700 {
     font-weight: 700;
 }
-.fw-800{
+
+.fw-800 {
     font-weight: 800;
 }
-.font10{
+
+.font10 {
     font-size: 10px;
 }
-.font12{
+
+.font12 {
     font-size: 12px;
 }
-.font14{
+
+.font14 {
     font-size: 14px;
 }
-.font16{
+
+.font16 {
     font-size: 16px;
 }
-.font18{
+
+.font18 {
     font-size: 18px;
 }
-.font20{
+
+.font20 {
     font-size: 20px;
 }
-.font22{
+
+.font22 {
     font-size: 22px;
 }
-.font24{
+
+.font24 {
     font-size: 24px;
 }
-.font26{
+
+.font26 {
     font-size: 26px;
 }
-.font28{
+
+.font28 {
     font-size: 28px;
 }
-.font30{
+
+.font30 {
     font-size: 30px;
 }
-.font35{
+
+.font35 {
     font-size: 35px;
 }
-.font40{
+
+.font40 {
     font-size: 40px;
 }
-.font45{
+
+.font45 {
     font-size: 45px;
 }
-.font50{
+
+.font50 {
     font-size: 50px;
 }
-.font55{
+
+.font55 {
     font-size: 55px;
 }
-.font60{
+
+.font60 {
     font-size: 60px;
 }
-.current-text{
-    color: hsla(0,0%,100%,.68);
+
+.current-text {
+    color: hsla(0, 0%, 100%, .68);
 }
-.ls-1{
+
+.text-purple {
+    color: rgba(255, 202, 43, 0.916);
+}
+.border-start{
+    border-left: 2px solid rgba(163, 163, 163, 0.089) !important;
+}
+.ls-1 {
     letter-spacing: 1px;
 }
