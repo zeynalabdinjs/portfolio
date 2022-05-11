@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeynalabdin</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/swiperjs/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/css/themify-icons.css">
+    <link rel="stylesheet" href="./assets/css/custom.css">
+</head>
+
+<body>
+
+    <nav>
+        navi
+    </nav>
+
+    <div class="main-wrapper">
+        <section id="home">
+            <div class="slide-titles d-flex flex-column">
+                <span class="head-title font60 fw-700">Front End Developer</span>
+                <span class="description-title mt-2 current-text fw-600 ls-1">
+                    Sometimes, we need to check the time, wondering when our work or meeting will finish, without
+                    getting caught by others.
+                </span>
+
+                <a class="mt-5" href="#"><i class="ti-angle-right me-3"></i> View Case</a>
+
+            </div>
+            <div class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./assets/img/slide1.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/img/slide2.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/img/slide3.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/img/slide4.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/img/slide5.jpg" />
+                    </div>
+                </div>
+                <div class="swiper-nav swiper-prev-btn"><i class="ti-angle-left"></i></div>
+                <div class="swiper-nav swiper-next-btn"><i class="ti-angle-right"></i></div>
+                <div class="slider-number"></div>
+            </div>
+            <div thumbsSlider="" class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./assets/img/slide1.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/img/slide2.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/img/slide3.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/img/slide4.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/img/slide5.jpg" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+    </div>
+
+
+
+
+    <script src="./assets/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="./assets/swiperjs/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            spaceBetween: 8,
+            slidesPerView: 3,
+            centeredSlides: true,
+            autoplay: true,
+            speed: 2500,
+            freeMode: true,
+            watchSlidesProgress: true,
+            direction: "vertical",
+        });
+        var swiper2 = new Swiper(".mySwiper2", {
+            loop: false,
+            speed: 2500,
+            autoplay: true,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: ".swiper-next-btn",
+                prevEl: ".swiper-prev-btn",
+            },
+            thumbs: {
+                swiper: swiper,
+            },
+        });
+        var sliderNumber = document.querySelector(".slider-number");
+        sliderNumber.innerHTML = "0" + (swiper2.activeIndex + 1)
+        swiper2.on('slideChange', function (e) {
+            sliderNumber.innerHTML = "0" + (swiper2.activeIndex + 1)
+            console.log(swiper2.activeIndex)
+        });
+
+    </script>
+</body>
+
+</html>
