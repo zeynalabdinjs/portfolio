@@ -157,12 +157,14 @@ nav {
     top: 0;
     width: 100%;
     height: 100vh;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-size: 50px;
     font-weight: 700;
     z-index: 100000;
+
 
     .top,
     .bottom {
@@ -210,6 +212,22 @@ nav {
             color: rgb(181, 181, 181);
             letter-spacing: 8px;
             text-transform: uppercase;
+            animation: blink 2s infinite ease;
+        }
+    }
+
+    @keyframes blink {
+        0% {
+            opacity: 0;
+        }
+        30%{
+            opacity: 1;
+        }
+        60%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
         }
     }
 

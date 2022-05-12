@@ -4,6 +4,7 @@ window.onload = () => {
     document.querySelector(".top .preloader-title").style.animation = "opacity 1s 1.3s forwards ease"
     document.querySelector(".bottom .preloader-title").style.animation = "opacity 1s 1.3s forwards ease"
     document.querySelector(".preloader .loader-line").style.animation = "loader 1.52s forwards ease-in-out"
+    
     setTimeout(() => {
         document.querySelector(".preloader").remove();
     }, 3500)
