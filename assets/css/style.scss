@@ -164,15 +164,6 @@ nav {
     font-size: 50px;
     font-weight: 700;
     z-index: 100000;
-    *{
-        display: none;
-    }
-    &.active {
-        display: flex;
-        *{
-            display: flex;
-        }
-    }
 
     .top,
     .bottom {
@@ -191,7 +182,6 @@ nav {
     }
 
     .top {
-        animation: top 2s 1.52s forwards ease;
         position: relative;
 
         .preloader-title {
@@ -199,7 +189,6 @@ nav {
             text-transform: uppercase;
             letter-spacing: 5px;
             font-weight: 700;
-            animation: opacity 1s 1.3s forwards ease;
         }
     }
 
@@ -210,12 +199,10 @@ nav {
         transform: translateY(-50%);
         height: 2px;
         background: #fff;
-        animation: loader 1.52s forwards ease-in-out;
     }
 
     .bottom {
         position: relative;
-        animation: bottom 2s 1.5s forwards ease;
 
         .preloader-title {
             font-size: 15px;
@@ -224,7 +211,6 @@ nav {
             color: rgb(181, 181, 181);
             letter-spacing: 8px;
             text-transform: uppercase;
-            animation: opacity 1s 1.3s forwards ease;
         }
     }
 

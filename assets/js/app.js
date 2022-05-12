@@ -1,6 +1,9 @@
 window.onload = () => {
-    document.querySelector(".preloader").classList.add("active")
-    document.querySelector(".preloader").style.background = "none"
+    document.querySelector(".preloader .top").style.animation = "top 2s 1.52s forwards ease"
+    document.querySelector(".preloader .bottom").style.animation = "bottom 2s 1.5s forwards ease"
+    document.querySelector(".top .preloader-title").style.animation = "opacity 1s 1.3s forwards ease"
+    document.querySelector(".bottom .preloader-title").style.animation = "opacity 1s 1.3s forwards ease"
+    document.querySelector(".preloader .loader-line").style.animation = "loader 1.52s forwards ease-in-out"
     setTimeout(() => {
         document.querySelector(".preloader").remove();
     }, 3500)
