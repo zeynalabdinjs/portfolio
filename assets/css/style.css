@@ -177,7 +177,6 @@ nav .nav-wrapper .menu-content .col-md-5 i {
   top: 0;
   width: 100%;
   height: 100vh;
-  display: none;
   background: #000;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -194,7 +193,17 @@ nav .nav-wrapper .menu-content .col-md-5 i {
   z-index: 100000;
 }
 
+.preloader * {
+  display: none;
+}
+
 .preloader.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.preloader.active * {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
