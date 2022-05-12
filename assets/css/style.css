@@ -245,22 +245,25 @@ nav .nav-wrapper .menu-content .col-md-5 i {
   color: #b5b5b5;
   letter-spacing: 8px;
   text-transform: uppercase;
-  -webkit-animation: blink 2s infinite ease;
-          animation: blink 2s infinite ease;
+  -webkit-animation: blink 2.3s infinite ease;
+          animation: blink 2.3s infinite ease;
 }
 
 @-webkit-keyframes blink {
   0% {
     opacity: 0;
   }
-  30% {
+  25% {
     opacity: 1;
   }
-  60% {
+  50% {
     opacity: 0;
   }
-  100% {
+  75% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
@@ -268,14 +271,17 @@ nav .nav-wrapper .menu-content .col-md-5 i {
   0% {
     opacity: 0;
   }
-  30% {
+  25% {
     opacity: 1;
   }
-  60% {
+  50% {
     opacity: 0;
   }
-  100% {
+  75% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
