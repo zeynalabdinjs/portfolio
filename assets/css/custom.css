@@ -89,6 +89,12 @@
 .font60 {
     font-size: 60px;
 }
+.font130{
+    font-size: 130px;
+}
+.w200{
+    width: 200px;
+}
 
 .current-text {
     color: hsla(0, 0%, 100%, .68);
@@ -97,9 +103,22 @@
 .text-purple {
     color: rgba(255, 202, 43, 0.916);
 }
+.text-current{
+    color: white;
+}
+.text-current-50{
+    color: rgba(255, 255, 255, 0.701);
+}
+.bg-current{
+    background: #07060a;
+}
 .border-start{
     border-left: 2px solid rgba(163, 163, 163, 0.089) !important;
 }
+    
 .ls-1 {
     letter-spacing: 1px;
+}
+.lh-1{
+    line-height: 24px !important;
 }

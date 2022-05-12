@@ -1,10 +1,11 @@
 window.onload = () => {
+    document.querySelector("body").style.overflow = "auto"
     document.querySelector(".preloader .top").style.animation = "top 2s 1.52s forwards ease"
     document.querySelector(".preloader .bottom").style.animation = "bottom 2s 1.5s forwards ease"
     document.querySelector(".top .preloader-title").style.animation = "opacity 1s 1.3s forwards ease"
     document.querySelector(".bottom .preloader-title").style.animation = "opacity 1s 1.3s forwards ease"
     document.querySelector(".preloader .loader-line").style.animation = "loader 1.52s forwards ease-in-out"
-    
+
     setTimeout(() => {
         document.querySelector(".preloader").remove();
     }, 3500)
@@ -49,6 +50,13 @@ const menu_content = document.querySelector(".menu-content");
 nav_toggle.addEventListener("click", () => {
     nav_toggle.classList.toggle("active");
     menu_content.classList.toggle("active");
+
+    if (menu_content.classList.contains("active")) {
+        document.body.style.overflow = "hidden";
+    }
+    else{
+        document.body.style.overflow = "auto";
+    }
 
 
 });
