@@ -13,21 +13,23 @@ window.onload = () => {
 
 
 
-var swiper = new Swiper(".mySwiper", {
+const swiper = new Swiper(".mySwiper", {
     loop: true,
     spaceBetween: 8,
     slidesPerView: 3,
     centeredSlides: true,
     autoplay: true,
+    parallax: true,
     speed: 2500,
     freeMode: true,
     watchSlidesProgress: true,
     direction: "vertical",
 });
-var swiper2 = new Swiper(".mySwiper2", {
+const swiper2 = new Swiper(".mySwiper2", {
     loop: false,
     speed: 2500,
     autoplay: true,
+    parallax: true,
     spaceBetween: 30,
     navigation: {
         nextEl: ".swiper-next-btn",
@@ -37,6 +39,47 @@ var swiper2 = new Swiper(".mySwiper2", {
         swiper: swiper,
     },
 });
+
+const portfolio = new Swiper(".portfolio", {
+    spaceBetween: 30,
+    parallax: true,
+    speed: 1000,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        300: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        600: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+        },
+        900: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+        },
+        1800:{
+            slidesPerView: 4,
+            spaceBetween: 40,
+        }
+    },
+});
+
+const feedback = new Swiper(".feedback", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    parallax: true,
+    speed: 1000,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
+
+
 var sliderNumber = document.querySelector(".slider-number");
 sliderNumber.innerHTML = "0" + (swiper2.activeIndex + 1)
 swiper2.on('slideChange', function (e) {
@@ -54,7 +97,7 @@ nav_toggle.addEventListener("click", () => {
     if (menu_content.classList.contains("active")) {
         document.body.style.overflow = "hidden";
     }
-    else{
+    else {
         document.body.style.overflow = "auto";
     }
 

@@ -89,10 +89,12 @@
 .font60 {
     font-size: 60px;
 }
-.font130{
+
+.font130 {
     font-size: 130px;
 }
-.w200{
+
+.w200 {
     width: 200px;
 }
 
@@ -103,22 +105,31 @@
 .text-purple {
     color: rgba(255, 202, 43, 0.916);
 }
-.text-current{
+
+.text-current {
     color: white;
 }
-.text-current-50{
+
+.text-current-50 {
     color: rgba(255, 255, 255, 0.701);
 }
-.bg-current{
+
+.bg-current {
     background: #07060a;
 }
-.border-start{
+
+.border-start {
     border-left: 2px solid rgba(163, 163, 163, 0.089) !important;
 }
-    
+
+.bg-current-low {
+    background: rgb(11, 11, 11);
+}
+
 .ls-1 {
     letter-spacing: 1px;
 }
-.lh-1{
+
+.lh-1 {
     line-height: 24px !important;
 }

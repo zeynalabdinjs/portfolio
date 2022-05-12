@@ -217,16 +217,20 @@ nav {
         0% {
             opacity: 0;
         }
-        25%{
+
+        25% {
             opacity: 1;
         }
-        50%{
+
+        50% {
             opacity: 0;
         }
-        75%{
+
+        75% {
             opacity: 1;
         }
-        100%{
+
+        100% {
             opacity: 0;
         }
     }
@@ -479,7 +483,8 @@ nav {
         }
 
     }
-    .col-md-5.border-start{
+
+    .col-md-5.border-start {
         border: none !important;
     }
 }
@@ -488,19 +493,87 @@ nav {
 
 
 // About
-.image-box{
+.image-box {
     height: 400px;
     padding: 3rem 4rem !important;
-    background: rgb(11, 11, 11);
-    img{
+
+    img {
         object-fit: cover;
     }
 }
+
 @media screen and (max-width: 768px) {
-    .image-box{
+    .image-box {
         height: 300px;
         padding: 1rem 1.5rem !important;
     }
 }
 
 // About
+
+
+// Portfolio && feedback
+#portfolio {
+    .swiper {
+        height: 400px;
+
+        .swiper-pagination {
+            span {
+                background: #fff;
+                width: 24px !important;
+                height: 2px !important;
+                border-radius: 0%;
+                transition: 0.3s ease !important;
+
+                &.swiper-pagination-bullet-active {
+                    width: 30px !important;
+                }
+            }
+        }
+
+        .swiper-slide {
+            cursor: pointer;
+
+            span {
+                padding: 20px 0;
+                width: 100%;
+                transition: 0.4s ease;
+                background: linear-gradient(to top, rgba(0, 0, 0, 0.916), rgba(255, 255, 255, 0));
+                bottom: 0px;
+            }
+
+            &:hover span {
+                padding: 20px 0 40px 0;
+            }
+        }
+    }
+}
+#feedback {
+    .swiper-pagination {
+        span {
+            background: #fff;
+            width: 24px !important;
+            height: 2px !important;
+            border-radius: 0%;
+            transition: 0.3s ease !important;
+
+            &.swiper-pagination-bullet-active {
+                width: 30px !important;
+            }
+        }
+    }
+}
+
+#feedback {
+    .swiper-slide {
+        .feedback-author {
+            img {
+                width: 50px !important;
+                border-radius: 50%;
+                background: rgb(20, 20, 20);
+            }
+        }
+    }
+}
+
+// Portfolio && feedback
