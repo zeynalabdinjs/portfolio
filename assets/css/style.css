@@ -849,12 +849,20 @@ body.active nav {
   transition: 0.3s ease;
 }
 
+body.active nav .logo {
+  color: rgba(255, 255, 255, 0.68);
+}
+
 body.active nav .menu-toggle {
   color: #fff;
 }
 
 body.active nav.sticky {
   background: #fff;
+}
+
+body.active nav.sticky .logo {
+  color: rgba(0, 0, 0, 0.53);
 }
 
 body.active nav.sticky .menu-toggle {

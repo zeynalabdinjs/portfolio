@@ -791,7 +791,9 @@ body.active {
 
     nav {
         transition: 0.3s ease;
-
+        .logo{
+            color: hsla(0, 0%, 100%, .68);
+        }
 
         .menu-toggle {
             color: #fff;
@@ -799,7 +801,9 @@ body.active {
 
         &.sticky {
             background: #fff;
-
+            .logo{
+                color: rgba(0, 0, 0, 0.53);
+            }
             .menu-toggle {
                 color: #000;
             }
