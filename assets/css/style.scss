@@ -11,6 +11,7 @@ $font-stack: 'Montserrat', sans-serif;
 
 body {
     scroll-behavior: smooth;
+
     &::-webkit-scrollbar {
         width: 10px;
         background: #000;
@@ -26,6 +27,23 @@ body {
     &::-webkit-scrollbar-thumb {
         background-color: #818B99;
     }
+}
+
+.theme {
+    cursor: pointer;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    color: #000;
+    border-radius: 50% 0 0 50%;
+    width: 30px;
+    height: 30px;
+    z-index: 10;
 }
 
 nav {
@@ -458,6 +476,7 @@ nav {
 
     .description-title {
         max-width: 450px;
+        color: rgba(255, 255, 255, 0.701);
     }
 
     a {
@@ -589,6 +608,7 @@ nav {
                 transition: 0.4s ease;
                 background: linear-gradient(to top, rgba(0, 0, 0, 0.916), rgba(255, 255, 255, 0));
                 bottom: 0px;
+                color: #fff;
             }
 
             &:hover span {
@@ -702,3 +722,42 @@ footer {
 }
 
 // FOOTER
+
+
+// light mode
+body.active {
+    .text-current {
+        color: rgb(0, 0, 0);
+    }
+
+    .text-current-50 {
+        color: rgba(0, 0, 0, 0.53);
+    }
+
+    .bg-current {
+        background: #e4e4e4;
+    }
+
+    .bg-current-low {
+        background: #cecece;
+    }
+    %bullets {
+        background: rgb(0, 0, 0);
+        width: 24px !important;
+        height: 2px !important;
+        border-radius: 0%;
+        transition: 0.3s ease !important;
+    
+        &.swiper-pagination-bullet-active {
+            width: 34px !important;
+        }
+    }
+    nav{
+        background: #fff;
+        .menu-icon{
+            span{
+                background: #000 !important;
+            }
+        }
+    }
+}

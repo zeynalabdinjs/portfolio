@@ -11,6 +11,22 @@ window.onload = () => {
     }, 3500)
 }
 
+// dark-light mode
+var theme = document.querySelector(".theme");
+
+theme.addEventListener("click",()=>{
+    document.body.classList.toggle("active")
+    if(document.body.classList.contains("active")){
+        document.querySelector(".theme i").classList="fa-solid fa-moon font18"
+    }
+    else{
+        document.querySelector(".theme i").classList="fa-solid fa-sun font18"
+    }
+})
+// dark-light mode
+
+
+
 // Sticky Navbar
 var navbar = document.getElementById("navbar");
 var lastScrollY = window.scrollY;

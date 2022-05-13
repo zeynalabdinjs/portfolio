@@ -118,17 +118,19 @@
     background: #07060a;
 }
 
-.border-start {
-    border-left: 2px solid rgba(163, 163, 163, 0.089) !important;
-}
-
 .bg-current-low {
     background: #090909;
 }
 
+.border-start {
+    border-left: 2px solid rgba(163, 163, 163, 0.178) !important;
+}
+
+
 .ls-1 {
     letter-spacing: 0.8px;
 }
+
 .ls-4 {
     letter-spacing: 4px;
 }
@@ -136,10 +138,14 @@
 .lh-1 {
     line-height: 24px !important;
 }
-.border{
+
+.border {
     border: 1px solid #898989 !important;
 }
-a:hover{
+
+a:hover {
     text-decoration: none;
     color: rgb(151, 151, 151);
 }
+
+/* light mode */
