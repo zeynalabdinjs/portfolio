@@ -55,8 +55,6 @@ nav {
     z-index: 100;
     display: flex;
     align-items: center;
-    transition: 0.5s;
-
     &.sticky {
         position: fixed;
         background: #000;
@@ -728,18 +726,22 @@ footer {
 body.active {
     .text-current {
         color: rgb(0, 0, 0);
+        transition: 0.3s ease;
     }
-
+    
     .text-current-50 {
         color: rgba(0, 0, 0, 0.53);
+        transition: 0.3s ease;
     }
-
+    
     .bg-current {
         background: #e4e4e4;
+        transition: 0.3s ease;
     }
 
     .bg-current-low {
         background: #cecece;
+        transition: 0.3s ease;
     }
     %bullets {
         background: rgb(0, 0, 0);
@@ -753,10 +755,20 @@ body.active {
         }
     }
     nav{
-        background: #fff;
-        .menu-icon{
-            span{
-                background: #000 !important;
+        transition: 0.3s ease;
+        .logo, .menu-toggle{
+            color: #fff;
+        }
+        &.sticky{
+            background: #fff;
+            .logo, .menu-toggle{
+                color: #000;
+            }
+            .menu-icon{
+                span{
+                    transition: 0.3s ease;
+                    background: #000 !important;
+                }
             }
         }
     }

@@ -63,8 +63,6 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
 }
 
 nav.sticky {
@@ -775,18 +773,26 @@ footer .social a {
 
 body.active .text-current {
   color: black;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 body.active .text-current-50 {
   color: rgba(0, 0, 0, 0.53);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 body.active .bg-current {
   background: #e4e4e4;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 body.active .bg-current-low {
   background: #cecece;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 body.active #portfolio .swiper .swiper-pagination span, #portfolio .swiper .swiper-pagination body.active span, body.active #feedback .swiper-pagination span, #feedback .swiper-pagination body.active span, body.active #blog .swiper .swiper-pagination span, #blog .swiper .swiper-pagination body.active span {
@@ -803,10 +809,25 @@ body.active #portfolio .swiper .swiper-pagination span.swiper-pagination-bullet-
 }
 
 body.active nav {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+body.active nav .logo, body.active nav .menu-toggle {
+  color: #fff;
+}
+
+body.active nav.sticky {
   background: #fff;
 }
 
-body.active nav .menu-icon span {
+body.active nav.sticky .logo, body.active nav.sticky .menu-toggle {
+  color: #000;
+}
+
+body.active nav.sticky .menu-icon span {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
   background: #000 !important;
 }
 /*# sourceMappingURL=style.css.map */
