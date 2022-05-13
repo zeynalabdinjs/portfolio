@@ -98,6 +98,9 @@
     width: 200px;
 }
 
+.portfolio-back{
+    background: rgb(26, 26, 26);
+}
 
 .text-purple {
     color: rgba(255, 202, 43, 0.916);

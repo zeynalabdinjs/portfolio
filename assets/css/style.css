@@ -4,6 +4,10 @@
   font-weight: 500;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 body {
@@ -589,10 +593,10 @@ nav .nav-wrapper .menu-content .col-md-5 i {
   text-decoration: none;
   cursor: pointer;
   color: #fff;
-  border-radius: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.155);
-  width: 160px;
-  padding: 9px 0;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.227);
+  width: 175px;
+  padding: 12px;
 }
 
 .slide-titles a:hover {
@@ -689,13 +693,18 @@ nav .nav-wrapper .menu-content .col-md-5 i {
   cursor: pointer;
 }
 
+#portfolio .swiper .swiper-slide img {
+  width: 200px !important;
+  height: auto;
+}
+
 #portfolio .swiper .swiper-slide span {
   padding: 20px 0;
   width: 100%;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.916)), to(rgba(255, 255, 255, 0)));
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.916), rgba(255, 255, 255, 0));
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(4, 5, 28, 0.304)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to top, rgba(4, 5, 28, 0.304), rgba(255, 255, 255, 0));
   bottom: 0px;
   color: #fff;
 }

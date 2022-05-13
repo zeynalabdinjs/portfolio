@@ -6,6 +6,7 @@ $font-stack: 'Montserrat', sans-serif;
     font-family: $font-stack;
     font-weight: 500;
     box-sizing: border-box;
+    user-select: none;
 }
 
 
@@ -488,10 +489,10 @@ nav {
         text-decoration: none;
         cursor: pointer;
         color: #fff;
-        border-radius: 22px;
-        border: 1px solid rgba(255, 255, 255, 0.155);
-        width: 160px;
-        padding: 9px 0;
+        border-radius: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.227);
+        width: 175px;
+        padding: 12px;
 
         &:hover {
             color: #fff;
@@ -604,11 +605,16 @@ nav {
         .swiper-slide {
             cursor: pointer;
 
+            img {
+                width: 200px !important;
+                height: auto;
+            }
+
             span {
                 padding: 20px 0;
                 width: 100%;
                 transition: 0.4s ease;
-                background: linear-gradient(to top, rgba(0, 0, 0, 0.916), rgba(255, 255, 255, 0));
+                background: linear-gradient(to top, rgba(4, 5, 28, 0.304), rgba(255, 255, 255, 0));
                 bottom: 0px;
                 color: #fff;
             }
@@ -791,7 +797,8 @@ body.active {
 
     nav {
         transition: 0.3s ease;
-        .logo{
+
+        .logo {
             color: hsla(0, 0%, 100%, .68);
         }
 
@@ -801,9 +808,11 @@ body.active {
 
         &.sticky {
             background: #fff;
-            .logo{
+
+            .logo {
                 color: rgba(0, 0, 0, 0.53);
             }
+
             .menu-toggle {
                 color: #000;
             }
