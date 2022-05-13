@@ -12,6 +12,7 @@ body {
 
 body::-webkit-scrollbar {
   width: 10px;
+  background: #000;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -22,7 +23,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #000;
+  background-color: #818B99;
 }
 
 nav {
