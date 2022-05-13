@@ -9,7 +9,7 @@ $font-stack: 'Montserrat', sans-serif;
 }
 
 nav {
-    position: fixed;
+    position: absolute;
     left: 0;
     top: 0;
     width: 100%;
@@ -17,6 +17,13 @@ nav {
     z-index: 100;
     display: flex;
     align-items: center;
+    transition: 0.5s;
+
+    &.sticky {
+        position: fixed;
+        background: #000;
+        animation: sticky 1s forwards ease;
+    }
 
     .nav-wrapper {
         width: 100%;
@@ -91,12 +98,12 @@ nav {
             top: 0;
             position: absolute;
             width: 100%;
-            height: 100vh;
+            height: 110vh;
             visibility: hidden;
             opacity: 0;
             transition: 0.8s ease;
             transform: translateY(-100%);
-            padding-top: 100px;
+            padding-top: 80px;
             overflow-x: hidden;
             overflow-y: auto;
 
@@ -140,6 +147,16 @@ nav {
             }
 
         }
+    }
+}
+
+@keyframes sticky {
+    0% {
+        top: -10%;
+    }
+
+    100% {
+        top: 0;
     }
 }
 
@@ -195,7 +212,7 @@ nav {
         top: 50%;
         left: 0;
         transform: translateY(-50%);
-        height: 2px;
+        height: 3px;
         background: rgb(148, 148, 148);
     }
 
@@ -511,6 +528,17 @@ nav {
 
 // About
 
+%bullets {
+    background: #fff;
+    width: 24px !important;
+    height: 2px !important;
+    border-radius: 0%;
+    transition: 0.3s ease !important;
+
+    &.swiper-pagination-bullet-active {
+        width: 34px !important;
+    }
+}
 
 // Portfolio && feedback
 #portfolio {
@@ -519,15 +547,7 @@ nav {
 
         .swiper-pagination {
             span {
-                background: #fff;
-                width: 24px !important;
-                height: 2px !important;
-                border-radius: 0%;
-                transition: 0.3s ease !important;
-
-                &.swiper-pagination-bullet-active {
-                    width: 30px !important;
-                }
+                @extend %bullets;
             }
         }
 
@@ -548,18 +568,11 @@ nav {
         }
     }
 }
+
 #feedback {
     .swiper-pagination {
         span {
-            background: #fff;
-            width: 24px !important;
-            height: 2px !important;
-            border-radius: 0%;
-            transition: 0.3s ease !important;
-
-            &.swiper-pagination-bullet-active {
-                width: 30px !important;
-            }
+            @extend %bullets;
         }
     }
 }
@@ -577,3 +590,51 @@ nav {
 }
 
 // Portfolio && feedback
+
+// BLOG
+#blog {
+    .swiper {
+        height: 500px;
+
+        .swiper-pagination {
+            span {
+                @extend %bullets;
+            }
+        }
+
+        .swiper-slide {
+            width: 450px;
+            height: 300px;
+            background: #fff;
+
+            .blog-info {
+                position: absolute;
+                right: 0px;
+                bottom: -130px;
+                text-align: start;
+                padding: 25px 40px;
+                width: 90%;
+
+                .blog-informative {
+                    white-space: normal;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #blog {
+        .swiper-slide {
+            width: 100% !important;
+        }
+    }
+}
+
+// BLOG

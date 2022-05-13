@@ -11,6 +11,22 @@ window.onload = () => {
     }, 3500)
 }
 
+// Sticky Navbar
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+window.onscroll = () => {
+    if (window.pageYOffset >= sticky + 80) {
+        navbar.classList.add("sticky")
+    } else {
+        navbar.classList.remove("sticky");
+    }
+};
+
+
+// Sticky Navbar
+
+
 
 
 const swiper = new Swiper(".mySwiper", {
@@ -61,7 +77,7 @@ const portfolio = new Swiper(".portfolio", {
             slidesPerView: 3,
             spaceBetween: 40,
         },
-        1800:{
+        1800: {
             slidesPerView: 4,
             spaceBetween: 40,
         }
@@ -73,6 +89,14 @@ const feedback = new Swiper(".feedback", {
     spaceBetween: 30,
     parallax: true,
     speed: 1000,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
+const blog = new Swiper(".blog", {
+    slidesPerView: "auto",
+    spaceBetween: 20,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,

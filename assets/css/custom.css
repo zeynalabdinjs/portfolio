@@ -123,11 +123,11 @@
 }
 
 .bg-current-low {
-    background: rgb(11, 11, 11);
+    background: #090909;
 }
 
 .ls-1 {
-    letter-spacing: 1px;
+    letter-spacing: 0.8px;
 }
 
 .lh-1 {
