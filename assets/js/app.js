@@ -20,7 +20,7 @@ window.addEventListener("scroll", () => {
         navbar.classList.add("sticky");
         navbar.style.animation = 'sticky 1s forwards ease'
     }
-    else if(window.scrollY < 100){
+    else if (window.scrollY < 100) {
         navbar.style.animation = 'none'
         navbar.classList.remove("sticky");
     }
@@ -109,6 +109,8 @@ const feedback = new Swiper(".feedback", {
 const blog = new Swiper(".blog", {
     slidesPerView: "auto",
     spaceBetween: 20,
+    parallax: true,
+    speed: 1000,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
