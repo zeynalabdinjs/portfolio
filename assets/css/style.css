@@ -518,7 +518,7 @@ nav .nav-wrapper .menu-content .col-md-5 i {
 }
 
 .mySwiper {
-  height: 200px;
+  height: 160px;
   width: 100px;
   position: absolute !important;
   left: 0 !important;
@@ -533,7 +533,7 @@ nav .nav-wrapper .menu-content .col-md-5 i {
 
 .mySwiper .swiper-slide {
   cursor: pointer;
-  height: 30% !important;
+  height: 48px !important;
   width: 50px;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
@@ -769,6 +769,12 @@ footer .social a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+body.active .text-purple {
+  color: #d8a200;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 body.active .text-current {
