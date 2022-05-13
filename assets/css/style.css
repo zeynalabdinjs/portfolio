@@ -677,4 +677,37 @@ nav .nav-wrapper .menu-content .col-md-5 i {
     width: 100% !important;
   }
 }
+
+footer .col-12:not(:first-child) h2 {
+  position: relative;
+}
+
+footer .col-12:not(:first-child) h2::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 16px;
+  bottom: -8px;
+  background-color: #fff;
+  left: 0;
+}
+
+footer .social {
+  width: 120px !important;
+}
+
+footer .social a {
+  text-decoration: none;
+  width: 35px;
+  height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 /*# sourceMappingURL=style.css.map */

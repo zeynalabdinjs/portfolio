@@ -638,3 +638,38 @@ nav {
 }
 
 // BLOG
+
+// FOOTER
+footer {
+    .col-12:not(:first-child) {
+        h2 {
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                height: 2px;
+                width: 16px;
+                bottom: -8px;
+                background-color: #fff;
+                left: 0;
+            }
+
+        }
+    }
+
+    .social {
+        width: 120px !important;
+
+        a {
+            text-decoration: none;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+// FOOTER

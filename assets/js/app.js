@@ -18,9 +18,14 @@ var sticky = navbar.offsetTop;
 window.onscroll = () => {
     if (window.pageYOffset >= sticky + 80) {
         navbar.classList.add("sticky")
-    } else {
+    }
+    else if (window.pageYOffset < oldYoffset) {
         navbar.classList.remove("sticky");
     }
+    else {
+        navbar.classList.remove("sticky");
+    }
+    var oldYoffset = window.pageYOffset
 };
 
 
@@ -108,7 +113,6 @@ var sliderNumber = document.querySelector(".slider-number");
 sliderNumber.innerHTML = "0" + (swiper2.activeIndex + 1)
 swiper2.on('slideChange', function (e) {
     sliderNumber.innerHTML = "0" + (swiper2.activeIndex + 1)
-    console.log(swiper2.activeIndex)
 });
 
 // Navbar
