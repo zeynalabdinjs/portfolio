@@ -98,28 +98,36 @@
     width: 200px;
 }
 
-.current-text {
-    color: hsla(0, 0%, 100%, .68);
-}
 
 .text-purple {
     color: rgba(255, 202, 43, 0.916);
+    transition: 0.3s ease;
+
 }
 
 .text-current {
     color: white;
+    transition: 0.3s ease;
+
 }
 
 .text-current-50 {
-    color: rgba(255, 255, 255, 0.701);
+    color: hsla(0, 0%, 100%, .68);
+    transition: 0.3s ease;
+    
+
 }
 
 .bg-current {
     background: #07060a;
+    transition: 0.3s ease;
+
 }
 
 .bg-current-low {
     background: #090909;
+    transition: 0.3s ease;
+
 }
 
 .border-start {
@@ -143,6 +151,9 @@
     border: 1px solid #898989 !important;
 }
 
+a{
+    text-decoration: none;
+}
 a:hover {
     text-decoration: none;
     color: rgb(151, 151, 151);

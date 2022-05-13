@@ -15,6 +15,7 @@ body {
     &::-webkit-scrollbar {
         width: 10px;
         background: #000;
+        transition: 0.3s ease;
     }
 
     &::-webkit-scrollbar-thumb {
@@ -22,9 +23,11 @@ body {
         border: 3px solid transparent;
         border-radius: 9px;
         background-clip: content-box;
+        transition: 0.3s ease;
     }
 
     &::-webkit-scrollbar-thumb {
+        transition: 0.3s ease;
         background-color: #818B99;
     }
 }
@@ -55,6 +58,7 @@ nav {
     z-index: 100;
     display: flex;
     align-items: center;
+
     &.sticky {
         position: fixed;
         background: #000;
@@ -724,6 +728,12 @@ footer {
 
 // light mode
 body.active {
+    #home {
+        .description-title {
+            color: hsla(0, 0%, 100%, .68);
+        }
+    }
+
     scroll-behavior: smooth;
 
     &::-webkit-scrollbar {
@@ -742,20 +752,21 @@ body.active {
         background-color: #000;
     }
 
-    .text-purple{
+    .text-purple {
         color: rgb(216, 162, 0);
         transition: 0.3s ease;
     }
+
     .text-current {
         color: rgb(0, 0, 0);
         transition: 0.3s ease;
     }
-    
+
     .text-current-50 {
-        color: rgba(0, 0, 0, 0.53) !important;
+        color: rgba(0, 0, 0, 0.53);
         transition: 0.3s ease;
     }
-    
+
     .bg-current {
         background: #e4e4e4;
         transition: 0.3s ease;
@@ -765,29 +776,36 @@ body.active {
         background: #cecece;
         transition: 0.3s ease;
     }
+
     %bullets {
         background: rgb(0, 0, 0);
         width: 24px !important;
         height: 2px !important;
         border-radius: 0%;
         transition: 0.3s ease !important;
-    
+
         &.swiper-pagination-bullet-active {
             width: 34px !important;
         }
     }
-    nav{
+
+    nav {
         transition: 0.3s ease;
-        .logo, .menu-toggle{
+
+
+        .menu-toggle {
             color: #fff;
         }
-        &.sticky{
+
+        &.sticky {
             background: #fff;
-            .logo, .menu-toggle{
+
+            .menu-toggle {
                 color: #000;
             }
-            .menu-icon{
-                span{
+
+            .menu-icon {
+                span {
                     transition: 0.3s ease;
                     background: #000 !important;
                 }
