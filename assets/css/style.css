@@ -6,6 +6,25 @@
           box-sizing: border-box;
 }
 
+body {
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #818B99;
+  border: 3px solid transparent;
+  border-radius: 9px;
+  background-clip: content-box;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #000;
+}
+
 nav {
   position: absolute;
   left: 0;
@@ -26,8 +45,6 @@ nav {
 nav.sticky {
   position: fixed;
   background: #000;
-  -webkit-animation: sticky 1s forwards ease;
-          animation: sticky 1s forwards ease;
 }
 
 nav .nav-wrapper {
@@ -174,7 +191,7 @@ nav .nav-wrapper .menu-content .col-md-5 i {
 
 @-webkit-keyframes sticky {
   0% {
-    top: -10%;
+    top: -80px;
   }
   100% {
     top: 0;
@@ -183,10 +200,28 @@ nav .nav-wrapper .menu-content .col-md-5 i {
 
 @keyframes sticky {
   0% {
-    top: -10%;
+    top: -80px;
   }
   100% {
     top: 0;
+  }
+}
+
+@-webkit-keyframes remove-sticky {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -80px;
+  }
+}
+
+@keyframes remove-sticky {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -80px;
   }
 }
 

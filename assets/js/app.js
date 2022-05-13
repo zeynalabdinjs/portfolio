@@ -13,20 +13,27 @@ window.onload = () => {
 
 // Sticky Navbar
 var navbar = document.getElementById("navbar");
-var sticky = navbar.offsetTop;
+var lastScrollY = window.scrollY;
 
-window.onscroll = () => {
-    if (window.pageYOffset >= sticky + 80) {
-        navbar.classList.add("sticky")
+window.addEventListener("scroll", () => {
+    if (lastScrollY < window.scrollY && window.scrollY > 100) {
+        navbar.classList.add("sticky");
+        navbar.style.animation = 'sticky 1s forwards ease'
     }
-    else if (window.pageYOffset < oldYoffset) {
+    else if(window.scrollY < 100){
+        navbar.style.animation = 'none'
         navbar.classList.remove("sticky");
+    }
+    else if (lastScrollY > window.scrollY || window.scrollY > 100) {
+        navbar.style.animation = 'remove-sticky 1s forwards ease'
     }
     else {
         navbar.classList.remove("sticky");
     }
-    var oldYoffset = window.pageYOffset
-};
+
+    lastScrollY = window.scrollY;
+});
+
 
 
 // Sticky Navbar

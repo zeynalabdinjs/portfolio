@@ -8,6 +8,25 @@ $font-stack: 'Montserrat', sans-serif;
     box-sizing: border-box;
 }
 
+
+body {
+    scroll-behavior: smooth;
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #818B99;
+        border: 3px solid transparent;
+        border-radius: 9px;
+        background-clip: content-box;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #000;
+    }
+}
+
 nav {
     position: absolute;
     left: 0;
@@ -22,7 +41,6 @@ nav {
     &.sticky {
         position: fixed;
         background: #000;
-        animation: sticky 1s forwards ease;
     }
 
     .nav-wrapper {
@@ -152,11 +170,21 @@ nav {
 
 @keyframes sticky {
     0% {
-        top: -10%;
+        top: -80px;
     }
 
     100% {
         top: 0;
+    }
+}
+
+@keyframes remove-sticky {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: -80px;
     }
 }
 
