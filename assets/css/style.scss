@@ -136,9 +136,9 @@ nav {
         .menu-content {
             left: 0;
             top: 0;
-            position: absolute;
+            position: fixed;
             width: 100%;
-            height: 110vh;
+            height: 100vh;
             visibility: hidden;
             opacity: 0;
             transition: 0.8s ease;

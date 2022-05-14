@@ -14,13 +14,13 @@ window.onload = () => {
 // dark-light mode
 var theme = document.querySelector(".theme");
 
-theme.addEventListener("click",()=>{
+theme.addEventListener("click", () => {
     document.body.classList.toggle("active")
-    if(document.body.classList.contains("active")){
-        document.querySelector(".theme i").classList="fa-solid fa-moon font18"
+    if (document.body.classList.contains("active")) {
+        document.querySelector(".theme i").classList = "fa-solid fa-moon font18"
     }
-    else{
-        document.querySelector(".theme i").classList="fa-solid fa-sun font18"
+    else {
+        document.querySelector(".theme i").classList = "fa-solid fa-sun font18"
     }
 })
 // dark-light mode
@@ -32,7 +32,7 @@ var navbar = document.getElementById("navbar");
 var lastScrollY = window.scrollY;
 
 window.addEventListener("scroll", () => {
-    if (lastScrollY < window.scrollY && window.scrollY > 100) {
+    if ((lastScrollY < window.scrollY && window.scrollY > 100) && !menu_content.classList.contains("active")) {
         navbar.classList.add("sticky");
         navbar.style.animation = 'sticky 1s forwards ease'
     }
@@ -40,8 +40,11 @@ window.addEventListener("scroll", () => {
         navbar.style.animation = 'none'
         navbar.classList.remove("sticky");
     }
-    else if (lastScrollY > window.scrollY || window.scrollY > 100) {
+    else if ((lastScrollY > window.scrollY || window.scrollY > 100) && !menu_content.classList.contains("active")) {
         navbar.style.animation = 'remove-sticky 1s forwards ease'
+    }
+    else if (menu_content.classList.contains("active")) {
+        navbar.classList.add("sticky");
     }
     else {
         navbar.classList.remove("sticky");
@@ -51,6 +54,22 @@ window.addEventListener("scroll", () => {
 });
 
 
+// Navbar
+const nav_toggle = document.querySelector(".menu-toggle")
+const menu_content = document.querySelector(".menu-content");
+nav_toggle.addEventListener("click", () => {
+    nav_toggle.classList.toggle("active");
+    menu_content.classList.toggle("active");
+
+    if (menu_content.classList.contains("active")) {
+        document.body.style.overflow = "hidden";
+    }
+    else {
+        document.body.style.overflow = "auto";
+    }
+
+
+});
 
 // Sticky Navbar
 
@@ -140,19 +159,3 @@ swiper2.on('slideChange', function (e) {
     sliderNumber.innerHTML = "0" + (swiper2.activeIndex + 1)
 });
 
-// Navbar
-const nav_toggle = document.querySelector(".menu-toggle")
-const menu_content = document.querySelector(".menu-content");
-nav_toggle.addEventListener("click", () => {
-    nav_toggle.classList.toggle("active");
-    menu_content.classList.toggle("active");
-
-    if (menu_content.classList.contains("active")) {
-        document.body.style.overflow = "hidden";
-    }
-    else {
-        document.body.style.overflow = "auto";
-    }
-
-
-});

@@ -165,9 +165,9 @@ nav .nav-wrapper .menu-toggle.active .menu-icon span:nth-child(3) {
 nav .nav-wrapper .menu-content {
   left: 0;
   top: 0;
-  position: absolute;
+  position: fixed;
   width: 100%;
-  height: 110vh;
+  height: 100vh;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: 0.8s ease;
